@@ -1,5 +1,6 @@
 :root{
     --primaryColor:#0C121C;
+    --navbarColor:#151c2d;
     --secondaryColor:#7148FC;
     --headingFontColor:#FFFFFF;
     --normalTextColor:#FFFFFF;
@@ -24,6 +25,8 @@ body{
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    height: 10vh;
+    background-color: var(--navbarColor);
 }
 .menu_items{
     display: flex;
@@ -43,7 +46,7 @@ body{
     padding: 10px;
     border-radius: 15px;
     margin: 5px;
-    width: 250px;
+    width: 350px;
     border: solid 1px var(--secondaryColor);
     background-color: transparent;
     color: var(--normalTextColor);
@@ -73,4 +76,17 @@ body{
 .addtodo_btn:hover{
     background-color: var(--secondaryColor);
     animation: ease-in-out 2s ;
+}
+.sidebar_container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.todo_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navbarColor);
+    height: 70vh;
+    width: 100%;
 }

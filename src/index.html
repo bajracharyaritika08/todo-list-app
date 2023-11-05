@@ -1,135 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- All Links Here! -->
-    <!-- Icon  -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <!-- Css Link -->
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <!-- Font Links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300&family=Poppins:wght@200;300&family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- All Links Here! -->
-    <!-- Title -->
-    <title>Remind Me</title>
-  </head>
+    <meta charset="utf-8">  
+    <title>Todo List App in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
   <body>
-    <div class="main_container">
-      <!-- NavBar Starts Here ! -->
-      <div class="nav_bar">
-        <div class="company_name">
-          <h2 class="brand-name">Remind Me</h2>
-        </div>
-        <div class="menu_items">
-          
-          <div class="input_header">
-            <form action="">
-              <input
-                type="text"
-                placeholder="Search todos here!"
-                class="inputfield"
-              />
-            </form>
-          </div>
-        </div>
+    <div class="wrapper">
+      <div class="task-input">
+        <!-- <img src="bars-icon.svg" alt="icon"> -->
+        <input type="text" placeholder="Add a new task">
       </div>
-      <!-- NavBar Ends Here ! -->
-      <!-- Todos Bar -->
-      <div class="todobar_container">
-        <div class="sidebar_menu">
-          <form action="">
-            <input type="text" placeholder="Add Todos Here" class="addtodos" />
-              <button class="addtodo_btn">Add</button>
-              <button class="clearall_btn">Clear All</button>
-          </form>
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
         </div>
+        <button class="clear-btn">Clear All</button>
       </div>
-      <div class="filters">
-        <div>
-          <span>
-            <p>All</p>
-          </span>
-        </div>
-        <div>
-          <span>
-            <p>Pending</p>
-          </span>
-        </div>
-        <div>
-          <span>
-            <p>Completed</p>
-          </span>
-        </div>
-      </div>
-      <!-- Todos Bar -->
-      <div class="todo_list">
-        <div class="todos">
-          <div class="todo">
-            <p>Wake up @ 7 AM</p>
-          </div>
-          <div class="settings">
-            <button class="morebtn" id="morebtn">
-              More
-            </button>
-          </div>
-        </div>
-        <div class="todos">
-          <div class="todo">
-            <p>Wake up @ 7 AM</p>
-          </div>
-          <div class="settings">
-            <button class="morebtn" id="morebtn">
-              More
-            </button>
-          </div>
-        </div><div class="todos">
-          <div class="todo">
-            <p>Wake up @ 7 AM</p>
-          </div>
-          <div class="settings">
-            <button class="morebtn" id="morebtn">
-              More
-            </button>
-          </div>
-        </div>
-        <div class="todos">
-          <div class="todo">
-            <p>Wake up @ 7 AM</p>
-          </div>
-          <div class="settings">
-            <button class="morebtn" id="morebtn">
-              More
-            </button>
-          </div>
-        </div><div class="todos">
-          <div class="todo">
-            <p>Wake up @ 7 AM</p>
-          </div>
-          <div class="settings">
-            <button class="morebtn" id="morebtn">
-              More
-            </button>
-          </div>
-        </div><div class="todos">
-          <div class="todo">
-            <p>Wake up @ 7 AM</p>
-          </div>
-          <div class="settings">
-            <button class="morebtn" id="morebtn">
-              More
-            </button>
-          </div>
-        </div>
-      </div>
+      <ul class="task-box">
+      </ul>
     </div>
-  </body>
-  <!-- Linking External Js File -->
-  <script src="./js/index.js"></script>
 
+    <script src="./js/index.js"></script>
+
+  </body>
 </html>

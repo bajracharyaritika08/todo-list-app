@@ -14,7 +14,7 @@ let todos =JSON.parse(localStorage.getItem("todo-list"));
 const searchInput=()=>{
   searchTodos.addEventListener("input", ()=>{
     const inputedData = searchTodos.value;
-    console.log("TYPE OF" , inputedData.toLowerCase() )
+    // console.log("TYPE OF" , inputedData.toLowerCase() )
     if(todos){
       const filteredData = todos.filter((item)=>{
         return(
@@ -45,6 +45,8 @@ const searchInput=()=>{
     });
   };
   sortingToDo();
+
+
   // Deleting All Todos
   const removeToDos=() => {
     clearAll.addEventListener("click",()=>{
@@ -61,6 +63,8 @@ const searchInput=()=>{
     })
 };
 removeToDos();
+
+
 // ALL TODOS
 const allToDos=()=>{
   alltodos.onclick =()=>{
@@ -69,6 +73,8 @@ const allToDos=()=>{
   };  
 };  
 allToDos();
+
+
 //Completed TODOS
 const completedToDos = () => {
  // Replace "onComplete" with the actual ID of your button 
@@ -84,6 +90,8 @@ const completedToDos = () => {
   };  
 };  
 completedToDos();
+
+
 // Pending todos
 const pendingToDos=()=>{
   pending.onclick=()=>{
@@ -96,6 +104,8 @@ const pendingToDos=()=>{
   };  
 };  
 pendingToDos();
+
+
 //Declaring varibles for editing task
 let editId;
 //is false when page is loaded.
@@ -129,6 +139,8 @@ const showToDo=(todoList=[])=>{
   taskBox.innerHTML= li || `Nothing's here!`;
 }  
 showToDo(todos);
+
+
 //Update the status 
 const updateStatus=(selectedTask)=>{
   let taskName = selectedTask.parentElement.lastElementChild;
@@ -147,6 +159,8 @@ const updateStatus=(selectedTask)=>{
   localStorage.setItem("todo-list", JSON.stringify(todos))
 
 }  
+
+
 //EDITING THE TASKS
 const editTask=(taskId, taskName)=>{
   // console.log("TASK NAME SELECTED IS:", taskName)
@@ -154,6 +168,8 @@ const editTask=(taskId, taskName)=>{
   editId = taskId;
   taskInput.value = taskName;
 }  
+
+
 //DELETING THE TASKS
 const deleteTask=(deleteId)=>{
   // console.log("DELETED TASK ID IS:", deleteId)
@@ -167,6 +183,8 @@ const deleteTask=(deleteId)=>{
     showToDo(todos);
   }
 }  
+
+
 //KEY EVENT (ENTER)
 taskInput.addEventListener("keyup", e =>{
   let userTask = taskInput.value.trim();

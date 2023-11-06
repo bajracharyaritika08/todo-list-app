@@ -57,7 +57,15 @@ body{
   color: var(--normalTextColor);
   border: 2px solid var(--secondaryColor);
 }
-.searchbtn,.clear-btn,.editbtn,.deletebtn{
+.searchbtn,
+.clear-btn,
+.editbtn,
+.deletebtn,
+#all,
+#pending,
+#completed,
+.sort-btn
+{
   margin: 5px;
   width: auto;
   padding: 10px;
@@ -98,14 +106,6 @@ body{
   
 }
 
-.task-input input:focus,
-.task-input input.active{
-  padding-left: 52px;
-  border: 2px solid #3C87FF;
-}
-.task-input input::placeholder{
-  color: #b6b6b6;
-}
 /* TASK INPUT  */
 
 /* CONTROLS AND TASKS */
@@ -128,7 +128,7 @@ body{
   margin-left: 0;
 }
 .filters span.active{
-  color: #3C87FF;
+  color: var(--secondaryColor);
 }
 
 .clear-btn.active{
@@ -143,12 +143,23 @@ body{
   pointer-events: auto;
   transform: scale(0.93);
 }
+#all:active,
+#pending:active,
+#completed:active,
+.sort-btn:active{
+  opacity: 0.9;
+  pointer-events: auto;
+  transform: scale(0.93);
+}
 /* CONTROLS AND TASKS */
 .task-box {
   display: flex;
   flex-direction: column;
   padding: 20px;
   
+}
+#task_info{
+  margin: 20px 20px;
 }
 .check_box{
   background-color: #0C121C;

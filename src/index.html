@@ -16,9 +16,9 @@
         </div>
         <div class="searchbar">
           <input type="text" placeholder="Search..." class="search_bar">
-          <button id="search_btn" class="searchbtn">
+          <!-- <button id="search_btn" class="searchbtn">
             Click To Search
-          </button>
+          </button> -->
         </div>
       </div>
       <!-- Navbar Ends Here! -->
@@ -29,20 +29,27 @@
       <div class="task-input">
         <!-- <img src="bars-icon.svg" alt="icon"> -->
         <input type="text" placeholder="Add a new task" class="addtodo"><br>
-        <p>You have <span>0</span> task(s) to be done.</p>
+        <p>You have <span id="pendingcount">0</span> task(s) to be done.</p>
       </div>
       <!-- Input Field For Entering Tasks Ends Here! -->
       <div class="controls">
         <div class="filters">
-          <span class="active" id="all">All</span>
-          <span id="pending">Pending</span>
-          <span id="completed">Completed</span>
+          <button id="all">
+            <span class="active" >All</span>
+          </button>
+          <button id="pending">
+            <span >Pending</span>
+          </button>
+          <button id="completed">
+            <span>Completed</span>
+          </button>
         </div>
         <div class="manipulation">
-          <button class="clear-btn">Sort Tasks</button>
-          <button class="clear-btn">Clear All</button>
+          <button class="sort-btn" id="sort_btn" >Sort Tasks</button>
+          <button class="clear-btn" id="clear_btn">Clear All</button>
         </div>
       </div>
+      <span id="task_info"></span>
       <ul class="task-box">
       </ul>
     </div>

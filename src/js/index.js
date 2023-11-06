@@ -1,4 +1,5 @@
-const taskInput = document.querySelector(".task-input input"),
+const taskInput = document.querySelector(".task-input input")
+const filters = document.querySelector(".filters span"),
 taskBox = document.querySelector(".task-box");
 //Getting Localstorage with key todo-list
 let todos =JSON.parse(localStorage.getItem("todo-list"));
@@ -17,14 +18,14 @@ const showToDo=()=>{
       // console.log("TODO", todo)
       li += `<li class="task">
               <label for="${id}">
-                <input type="checkbox" onclick="updateStatus(this)" id="${id}" ${isCompleted}>
+                <input type="checkbox" onclick="updateStatus(this)" id="${id}" ${isCompleted} class="check_box">
                 <p class="${isCompleted}">${todo.todoName}</p>
               </label>
               <div class="setting">
                 <i class="uil uil-ellipis-h"></i>
                 <ul class="task-menu">
-                  <li onclick="editTask(${id}, '${todo.todoName}')">Edit</li>
-                  <li onclick="deleteTask(${id})">Delete</li>
+                  <li onclick="editTask(${id}, '${todo.todoName}')"><button class="editbtn">Edit</button></li>
+                  <li onclick="deleteTask(${id})"><button class="deletebtn">Delete</button></li>
                 </ul>
               </div>
             </li>`
@@ -66,6 +67,7 @@ const deleteTask=(deleteId)=>{
   // console.log("DELETED TASK ID IS:", deleteId)
   //Here, splice is used to remove the data deleteId means the id that is selected and 1 means the number of elements to be deleted.
   todos.splice(deleteId, 1);
+  alert("Task Deleted Successfully!")
   //Once it is deleted, setting it in local storage.
   localStorage.setItem("todo-list", JSON.stringify(todos))
   //and then rendering it.

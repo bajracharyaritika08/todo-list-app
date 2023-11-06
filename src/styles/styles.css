@@ -1,5 +1,21 @@
-/* Import Google Font - Poppins */
+/* Importing Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+  --primaryColor:#0C121C;
+  --navbarColor:#151c2d;
+  --secondaryColor:#7148FC;
+  --headingFontColor:#FFFFFF;
+  --normalTextColor:#FFFFFF;
+  --buttonColor:#D6DEE7;
+  --buttonColorTwo:#FCF2C1;
+  --buttonColorThree:#692935;
+  --buttonHoverColor:#94adca;
+  --borderColor:#B8BFC6;
+  --headingFontSize:25px;
+  --normalFontSize:10;
+  --fontFamilyOne:'Montserrat', sans-serif;
+  --fontFamilyTwo:'Open Sans', sans-serif;;
+}
 *{
   margin: 0;
   padding: 0;
@@ -9,27 +25,90 @@
 body{
   width: 100%;
   height: 100vh;
+  box-sizing: border-box;
   overflow-x: hidden;
+  background-color: var(--navbarColor);
   
+}
+/* NAVBAR */
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  background-color: var(--navbarColor);
+}
+.brand_name{
+  color: var(--headingFontColor);
+  font-size: var(--headingFontSize);
+}
+.quotes{
+  font-size: 2px;
+}
+.brand_{
+  color: var(--secondaryColor);
+}
+.search_bar{
+  padding: 10px;
+  width: 450px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--normalTextColor);
+  border: 2px solid var(--secondaryColor);
+}
+.searchbtn,.clear-btn,.editbtn,.deletebtn{
+  margin: 5px;
+  width: auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px var(--secondaryColor);
+  background-color: transparent;
+  color: var(--normalTextColor);
+  cursor: pointer;
+}
+
+/* NAVBAR */
+
+/* TASK INPUT  */
+.wrapper{
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primaryColor);
+  color: var(--normalTextColor);
 }
 ::selection{
   color: #fff;
   background: #3C87FF;
 }
-
 .task-input{
-  height: 52px;
-  padding: 0 25px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  flex-direction: column;
+  /* align-items: center; */
 }
+.addtodo{
+  padding: 10px;
+  width: 450px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--normalTextColor);
+  border: 2px solid var(--secondaryColor);
+  
+}
+
 .task-input input:focus,
 .task-input input.active{
   padding-left: 52px;
   border: 2px solid #3C87FF;
 }
 .task-input input::placeholder{
-  color: #bfbfbf;
+  color: #b6b6b6;
 }
+/* TASK INPUT  */
+
+/* CONTROLS AND TASKS */
 .controls, li{
   display: flex;
   align-items: center;
@@ -59,10 +138,28 @@ body{
 .clear-btn:active{
   transform: scale(0.93);
 }
-.task-box{
-  margin-top: 20px;
-  margin-right: 5px;
-  padding: 0 20px 10px 25px;
+.searchbtn:active{
+  opacity: 0.9;
+  pointer-events: auto;
+  transform: scale(0.93);
+}
+/* CONTROLS AND TASKS */
+.task-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+.check_box{
+  background-color: #0C121C;
+  padding: 105px;
+  border-radius: 50%;
+}
+.task{
+  display: flex;
+  align-items: center;
+  border-left: var(--secondaryColor) 3px solid;
+  background-color: var(--navbarColor);
 }
 .task-box.overflow{
   overflow-y: auto;
@@ -80,11 +177,11 @@ body{
   border-radius: 25px;
 }
 .task-box .task{
+  border-radius: 5px;
   list-style: none;
   font-size: 17px;
-  margin-bottom: 18px;
-  padding-bottom: 16px;
-  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #ccc;
 }
 .task-box .task:last-child{
@@ -110,6 +207,11 @@ body{
 }
 .task-box .settings{
   position: relative;
+}
+ul{
+  display: flex;
+  padding: 15px;
+  
 }
 .settings :where(i, li){
   cursor: pointer;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Todo List App in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
+  <body>
+    <div class="wrapper">
+      <!-- Navbar Starts Here! -->
+      <div class="navbar">
+        <div class="brandname">
+          <p class="brand_name"><span class="brand_">Remind</span> Me</p>
+          <p class="quotes">Your Reminder To Your Dos.</p>
+        </div>
+        <div class="searchbar">
+          <input type="text" placeholder="Search..." class="search_bar">
+          <button id="search_btn" class="searchbtn">
+            Click To Search
+          </button>
+        </div>
+      </div>
+      <!-- Navbar Ends Here! -->
+      <!-- SIDE BAR STARTS HERE-->
+
+      <!-- SIDE BAR ENDS HERE-->
+      <!-- Input Field For Entering Tasks Starts Here! -->
+      <div class="task-input">
+        <!-- <img src="bars-icon.svg" alt="icon"> -->
+        <input type="text" placeholder="Add a new task" class="addtodo"><br>
+        <p>You have <span>0</span> task(s) to be done.</p>
+      </div>
+      <!-- Input Field For Entering Tasks Ends Here! -->
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+        <div class="manipulation">
+          <button class="clear-btn">Sort Tasks</button>
+          <button class="clear-btn">Clear All</button>
+        </div>
+      </div>
+      <ul class="task-box">
+      </ul>
+    </div>
+
+    <script src="./js/index.js"></script>
+
+  </body>
+</html>
